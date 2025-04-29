@@ -10,7 +10,7 @@
             padding: 10px;
         }
             .card-title {
-            font-weight: 600;
+            font-weight: 400;
             font-size: 3em;
             padding: 0 0 10px 0;
         }
@@ -33,22 +33,17 @@
 <div id="card-list"></div>
 
 <script>
-    function addCard() {
-    // clone the template
-    const template =
-    document.getElementById("card-template")
-    .content.cloneNode(true);
-    // populate the template
-    template.querySelector('.card-title').innerText =
-    'My Card Title';
-    template.querySelector('.card-text').innerText =
-    'lorem ipsum ble bla';
-    // include the populated template into the page
-    document.querySelector('#card-list')
-    .appendChild(template);
+    function addCard(title, text) {
+      const template = document.getElementById("card-template").content.cloneNode(true);
+      template.querySelector('.card-title').innerText = title;
+      template.querySelector('.card-text').innerText = text;
+      document.querySelector('#card-list').appendChild(template);
     }
-    addCard();
-    </script>
 
+    // Example cards
+    addCard("First Card", "This is the first card.");
+    addCard("Second Card", "This is another card.");
+
+</script>
 </body>
 </html>
