@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Square Slider</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: white;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100px;
+      height: 300px;
+      background-color: white;
+    }
+
+    .square {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      transition: all 1s ease-in-out;
+    }
+
+    .move-down {
+      transform: translateY(200px);
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+
+<div class="slider-container">
+  <div class="square" id="square"></div>
+</div>
+
+<script>
+  const square = document.getElementById('square');
+  let isDown = false;
+
+  setInterval(() => {
+    isDown = !isDown;
+    if (isDown) {
+      square.classList.add('move-down');
+    } else {
+      square.classList.remove('move-down');
+    }
+  }, 2000);
+</script>
+
+</body>
+</html>
