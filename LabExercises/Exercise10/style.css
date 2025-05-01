@@ -1,0 +1,12 @@
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .card-text.description {
+    font-size: 0.9rem;
+    height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
