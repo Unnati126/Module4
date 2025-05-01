@@ -1,0 +1,23 @@
+body { font-family: Arial, sans-serif; padding: 20px; }
+    .news-container { margin-top: 20px; }
+    .news-item {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    .news-title { font-weight: bold; font-size: 1.2em; }
+    .news-content { margin-top: 5px; }
+    .news-form { margin-bottom: 20px; }
+    .news-form input, .news-form textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+      font-size: 1em;
+    }
+    .news-form button {
+      padding: 10px 15px;
+      font-size: 1em;
+    }
