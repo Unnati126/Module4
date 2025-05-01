@@ -1,58 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <mata charset="UTF-8">
-        <title>Square Slide</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Square Slide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slider-container">
+        <div class="square" id="square"></div>
+    </div>
 
-        <style>
-            body {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                background-color: #f0f0f0;
-                margin: 0;
-            }
-
-            .slider-container {
-                position: relative;
-                width: 100px;
-                height: 300px;
-                background-color: #f0f0f0;
-            }
-
-            .square {
-                position: absolute;
-                width: 100px;
-                height: 100px;
-                background-color: red;
-                transition: all 1s ease-in-out;
-            }
-
-            .move-dowm {
-                transform: translateY(200px);
-                background-color: blue;
-            }
-        </style>
-    </head>
-
-    <body>
-        <div class="slider-container">
-            <div class="square" id="square"></div>
-        </div>
-
-    <script>
-        const square = document.getElementById('square');
-        let isDown = false;
-
-        setInterval(() => {
-            isDown = !isDown;
-            if (isDown) {
-                square.classList.add('move-dowm');
-            } else {
-                square.classList.remove('move-dowm');
-            }
-        }, 2000);
-    </script>
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>
