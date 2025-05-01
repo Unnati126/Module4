@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Square Slider</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: white;
-    }
+    <head>
+        <mata charset="UTF-8">
+        <title>Square Slide</title>
 
-    .slider-container {
-      position: relative;
-      width: 100px;
-      height: 300px;
-      background-color: white;
-    }
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #f0f0f0;
+                margin: 0;
+            }
 
-    .square {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      background-color: red;
-      transition: all 1s ease-in-out;
-    }
+            .slider-container {
+                position: relative;
+                width: 100px;
+                height: 300px;
+                background-color: #f0f0f0;
+            }
 
-    .move-down {
-      transform: translateY(200px);
-      background-color: blue;
-    }
-  </style>
-</head>
-<body>
+            .square {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                transition: all 1s ease-in-out;
+            }
 
-<div class="slider-container">
-  <div class="square" id="square"></div>
-</div>
+            .move-dowm {
+                transform: translateY(200px);
+                background-color: blue;
+            }
+        </style>
+    </head>
 
-<script>
-  const square = document.getElementById('square');
-  let isDown = false;
+    <body>
+        <div class="slider-container">
+            <div class="square" id="square"></div>
+        </div>
 
-  setInterval(() => {
-    isDown = !isDown;
-    if (isDown) {
-      square.classList.add('move-down');
-    } else {
-      square.classList.remove('move-down');
-    }
-  }, 2000);
-</script>
+    <script>
+        const square = document.getElementById('square');
+        let isDown = false;
 
-</body>
+        setInterval(() => {
+            isDown = !isDown;
+            if (isDown) {
+                square.classList.add('move-dowm');
+            } else {
+                square.classList.remove('move-dowm');
+            }
+        }, 2000);
+    </script>
+    </body>
 </html>
