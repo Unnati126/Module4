@@ -1,6 +1,59 @@
 const container = document.getElementById("card-container");
+const template = document.getElementById("card-template");
 
-function createCard() {
+const data = [
+  {
+    title: "Card Title 1",
+    text: "This is the description for card 1.",
+    img: "https://via.placeholder.com/150"
+  },
+  {
+    title: "Card Title 2",
+    text: "This is the description for card 2.",
+    img: "https://via.placeholder.com/150"
+  },
+  {
+    title: "Card Title 3",
+    text: "This is the description for card 3.",
+    img: "https://via.placeholder.com/150"
+  },
+  {
+    title: "Card Title 4",
+    text: "This is the description for card 4.",
+    img: "https://via.placeholder.com/150"
+  },
+  {
+    title: "Card Title 5",
+    text: "This is the description for card 5.",
+    img: "https://via.placeholder.com/150"
+  },
+  {
+    title: "Card Title 6",
+    text: "This is the description for card 6.",
+    img: "https://via.placeholder.com/150"
+  },
+  {
+    title: "Card Title 7",
+    text: "This is the description for card 7.",
+    img: "https://via.placeholder.com/150"
+  },
+  {
+    title: "Card Title 8",
+    text: "This is the description for card 8.",
+    img: "https://via.placeholder.com/150"
+  }
+];
+
+data.forEach(item => {
+  const clone = template.content.cloneNode(true);
+  clone.querySelector(".card-title").innerText = item.title;
+  clone.querySelector(".card-text").innerText = item.text;
+  clone.querySelector("img").src = item.img;
+  container.appendChild(clone);
+});
+
+
+/*function createCard() {
   return `
     <div class="col-12 col-md-6 col-lg-3">
       <div class="card">
@@ -21,4 +74,4 @@ function createCard() {
 // Render 8 cards
 for (let i = 0; i < 8; i++) {
   container.innerHTML += createCard();
-}
+}*/

@@ -3,7 +3,21 @@ const data = [
     { name: 'Alice', age: 39 }
   ];
 
-  function addCard(title, text) {
+
+  function addCard(title, ageValue) {
+    const template = document.getElementById("card-template").content.cloneNode(true);
+    template.querySelector('.card-title').innerText = title;
+    template.querySelector('.card-text').innerText = ageValue;
+    document.getElementById('card-list').appendChild(template);
+  }
+  
+  data.forEach(person => {
+    addCard(person.name, person.age);
+  });
+
+
+
+  /*function addCard(title, text) {
     const template = document.getElementById("card-template").content.cloneNode(true);
     template.querySelector('.card-title').innerText = title;
     template.querySelector('.card-text').innerText = text;
@@ -12,4 +26,5 @@ const data = [
 
   data.forEach(person => {
     addCard(person.name, `Age: ${person.age}`);
-  });
+  });*/
+
